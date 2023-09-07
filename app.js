@@ -13,7 +13,7 @@ let weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Sat
 const details = [{
     slack_name:"ChidiebereAgate",
     current_day:weekdays[new Date().getDay()],
-    utc_time:new Date(),
+    utc_time:new Date().toISOString().splice(-2,1),
     track:"backend",
     github_file_url:"https://github.com/ChidiUmeh/Queryendpoint/blob/main/app.js",
     github_repo_url:"https://github.com/ChidiUmeh/Queryendpoint",
@@ -26,6 +26,7 @@ const details = [{
 app.get('/api', (req,res)=>{
     const {slack_name,track} = req.query
    const checkQuery = details.find(name=>name.slack_name===slack_name && name.track===track)
+   console.log(checkQuery.utc_time)
    if(checkQuery)
    return res.status(200).json(checkQuery)
    return res.status(404).json({error: "does not exist"})
