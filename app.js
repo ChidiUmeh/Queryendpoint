@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000
 
 let weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 let date = new Date().toISOString().split('')
-date.splice(-2,1)
+date.splice(-5,4)
 let utc_date = date.join("")
 const details = [{
     slack_name:"ChidiebereAgate",
