@@ -15,8 +15,8 @@ const details = [{
     current_day:weekdays[new Date().getDay()],
     utc_time:new Date().toISOString(),
     track:"backend",
-    github_file_url:"https://github.com/ChidiUmeh/Queryendpoint",
-    github_repo_url:"https://github.com/ChidiUmeh?tab=repositories",
+    github_file_url:"https://github.com/ChidiUmeh/Queryendpoint/blob/main/app.js",
+    github_repo_url:"https://github.com/ChidiUmeh/Queryendpoint",
     status_code : 200
 }]
 
