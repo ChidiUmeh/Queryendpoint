@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000
 
 let weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 const details = [{
-    slack_name:"Chidiebere",
+    slack_name:"ChidiebereAgate",
     current_day:weekdays[new Date().getDay()],
     utc_time:new Date().toISOString(),
     track:"backend",
