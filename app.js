@@ -1,10 +1,12 @@
 require("dotenv").config()
+const nocache = require('nocache')
 const express = require("express")
 const cors = require("cors")
 const app = express()
 
 
-
+app.use(cors())
+app.use(nocache())
 
 const port = process.env.PORT || 3000
 const currentDate = new Date();
@@ -35,7 +37,7 @@ app.get('/api', (req,res)=>{
 
 
 
-app.use(cors())
+
 
 app.listen(port, ()=>console.log(`Server listening on port ${port}`))
 
