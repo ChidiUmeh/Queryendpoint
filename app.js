@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000
 
 
 let weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-let date = new Date().toISOString().slice(0,22)+"Z"
+let date = new Date().toISOString().slice(0,19)+"Z"
 const details = [{
     slack_name:"ChidiebereAgate",
     current_day:weekdays[new Date().getUTCDay()],
