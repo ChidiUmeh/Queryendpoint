@@ -10,13 +10,10 @@ const port = process.env.PORT || 3000
 
 
 let weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-let date = ()=>{
-    console.log(new Date().toISOString().slice(0,19)+"Z")   
-}
 const details = [{
     slack_name:"ChidiebereAgate",
     current_day:weekdays[new Date().getUTCDay()],
-    utc_time:date(),
+    utc_time:new Date().toISOString().slice(0,19)+"Z",
     track:"backend",
     github_file_url:"https://github.com/ChidiUmeh/Queryendpoint/blob/main/app.js",
     github_repo_url:"https://github.com/ChidiUmeh/Queryendpoint",
