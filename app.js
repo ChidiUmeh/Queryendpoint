@@ -9,7 +9,7 @@ app.use(cors())
 const port = process.env.PORT || 3000
 
 
-let weekdays = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+let weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 let date = new Date().toISOString().split('')
 date.splice(-5,4)
 let utc_date = date.join("")
