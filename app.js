@@ -7,13 +7,14 @@ const app = express()
 app.use(cors())
 
 const port = process.env.PORT || 3000
-
+const currentDate = new Date();
+const formattedUTCDate = currentDate.toISOString().slice(0, -5) + 'Z';
 
 let weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 const details = [{
     slack_name:"ChidiebereAgate",
     current_day:weekdays[new Date().getUTCDay()],
-    utc_time:new Date().toISOString().slice(0,19)+"Z",
+    utc_time:formattedUTCDate,
     track:"backend",
     github_file_url:"https://github.com/ChidiUmeh/Queryendpoint/blob/main/app.js",
     github_repo_url:"https://github.com/ChidiUmeh/Queryendpoint",

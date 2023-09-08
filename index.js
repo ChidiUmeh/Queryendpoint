@@ -1,5 +1,6 @@
-const moment = require("moment")
+const currentDate = new Date();
+const formattedUTCDate = currentDate.toISOString().slice(0, -5) + 'Z';
 
-localTime = moment()
+console.log(formattedUTCDate)
 
-console.log(localTime.utc().slice(0,19))
+
