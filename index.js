@@ -1,2 +1,5 @@
+const moment = require("moment")
 
-    console.log(new Date().toISOString().slice(0,19)+"Z")   
+localTime = moment()
+
+console.log(localTime.utc())
