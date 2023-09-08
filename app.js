@@ -15,7 +15,7 @@ date.splice(-5,4)
 let utc_date = date.join("")
 const details = [{
     slack_name:"ChidiebereAgate",
-    current_day:weekdays[new Date().getDay()],
+    current_day:weekdays[date.toISOString().getDay()],
     utc_time:utc_date,
     track:"backend",
     github_file_url:"https://github.com/ChidiUmeh/Queryendpoint/blob/main/app.js",
