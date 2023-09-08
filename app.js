@@ -14,7 +14,7 @@ let weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Sat
 const details = [{
     slack_name:"ChidiebereAgate",
     current_day:weekdays[new Date().getUTCDay()],
-    utc_time:moment.utc(),
+    utc_time:moment.format(),
     track:"backend",
     github_file_url:"https://github.com/ChidiUmeh/Queryendpoint/blob/main/app.js",
     github_repo_url:"https://github.com/ChidiUmeh/Queryendpoint",
