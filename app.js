@@ -4,16 +4,17 @@ const express = require("express")
 const cors = require("cors")
 const app = express()
 
-app.use(nocache())
+
 app.use(cors())
+app.use(nocache())
 
 
-const port = process.env.PORT || 3000
-const currentDate = new Date();
-const formattedUTCDate = currentDate.toISOString().slice(0, -5) + 'Z';
+let port = process.env.PORT || 3000
+let currentDate = new Date();
+let formattedUTCDate = currentDate.toISOString().slice(0, -5) + 'Z';
 
 let weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-const details = [{
+let details = [{
     slack_name:"ChidiebereAgate",
     current_day:weekdays[new Date().getUTCDay()],
     utc_time:formattedUTCDate,
